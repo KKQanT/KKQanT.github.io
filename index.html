@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gwork — a command-line tool for your own Google Workspace files</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+<header>
+  <h1>gwork</h1>
+  <p class="lede">A small, auditable command-line tool that reads and edits <strong>your own</strong>
+  Google Docs, Sheets, Slides, Drive files and Gmail drafts from your own computer.</p>
+</header>
+
+<section>
+  <h2>What it does</h2>
+  <p>gwork is a Python command-line program. You run it on your own machine, you sign in with your
+  own Google account, and it acts on the files you point it at. It exists so that a person, or a
+  coding assistant working on that person's behalf, can do ordinary Workspace work without clicking
+  through a browser: read a document, fill in a spreadsheet, build a slide deck from a template,
+  draft an email, or read the review comments someone left on a file.</p>
+
+  <p>Typical uses:</p>
+  <ul>
+    <li>Read a Google Doc or Sheet and summarise it</li>
+    <li>Create or edit a Slides deck on a company template</li>
+    <li>List, search, upload, download or copy files in Drive</li>
+    <li>Draft a Gmail message for you to review and send yourself</li>
+    <li>Read and reply to reviewer comments on a Doc, Sheet or deck</li>
+  </ul>
+</section>
+
+<section>
+  <h2>What it is not</h2>
+  <p>There is no gwork website, no gwork account, and no gwork server. Nothing you do with it
+  passes through a service we operate, because there isn't one. The program runs on your computer
+  and talks directly to Google's APIs using the permission you granted it.</p>
+</section>
+
+<section>
+  <h2>The permissions it asks for</h2>
+  <p>When you sign in, Google will show you the list below and ask whether to allow it. gwork
+  requests these because the commands it offers cover all five services. It only ever touches the
+  specific file or message you name in a command.</p>
+
+  <table>
+    <thead><tr><th>Permission</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Google Drive</td><td>List, search, read, upload, download, copy and organise your files</td></tr>
+      <tr><td>Google Docs</td><td>Read and edit documents</td></tr>
+      <tr><td>Google Sheets</td><td>Read and edit spreadsheets</td></tr>
+      <tr><td>Google Slides</td><td>Read and build presentations</td></tr>
+      <tr><td>Gmail</td><td>Search and read your mail, and create drafts. gwork does not send mail.</td></tr>
+      <tr><td>Email address</td><td>So the tool can tell you which account you are signed in as</td></tr>
+    </tbody>
+  </table>
+
+  <p>You can withdraw all of it at any time from
+  <a href="https://myaccount.google.com/permissions">your Google Account permissions page</a>.</p>
+</section>
+
+<section>
+  <h2>Where your data goes</h2>
+  <p>Nowhere except between your computer and Google. Your sign-in token is written to a file on
+  your own machine, readable only by you. It is never transmitted anywhere, never shared between
+  users, and never seen by anyone else. The <a href="privacy.html">privacy policy</a> sets this out
+  in full.</p>
+</section>
+
+<section>
+  <h2>The unverified app warning</h2>
+  <p>Google shows a screen saying <em>"Google hasn't verified this app"</em> when you sign in. That
+  is expected. It means this tool has not been through Google's paid verification review, not that
+  anything is wrong with it. Google reserves that review for apps distributed to the general public;
+  gwork is an internal tool used by a small number of named people. Choose
+  <strong>Advanced</strong>, then <strong>Go to gwork (unsafe)</strong> to continue.</p>
+</section>
+
+<footer>
+  <p><a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of service</a> ·
+  <a href="https://github.com/KKQanT/gwork">Source code</a></p>
+  <p class="fine">gwork is maintained by Siametrics Consulting. Contact:
+  <a href="mailto:peerakarn.j@siametrics.com">peerakarn.j@siametrics.com</a></p>
+</footer>
+
+</main>
+</body>
+</html>
